@@ -5,3 +5,22 @@ body {
 button {
   border-radius: 5px;
 }
+
+.float-child {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  float: left;
+}
+
+.parent-for-float {
+  border: 1px solid black;
+}
+
+.parent-for-float:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
