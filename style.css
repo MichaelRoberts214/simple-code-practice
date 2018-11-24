@@ -25,6 +25,10 @@ button {
   visibility: hidden;
 }
 
+.bubble-container {
+  height: 50px;
+}
+
 .bubble {
   color: #ffffff;
   background-color: #999966;
@@ -55,4 +59,40 @@ button {
   content: "";
   position: absolute;
   left: -7px;
+}
+
+.tip {
+  text-decoration: none;
+  position: relative;
+}
+
+.tip:hover:before {
+  position: absolute;
+  padding: 0.5em;
+  content: attr(title);
+  min-width: 120px;
+  text-align: center;
+  /* width: auto;
+  height: auto; */
+  white-space: nowrap;
+  top: -32px;
+  background: rgba(0, 0, 0, 0.7);
+  -moz-border-radius: 5px;
+  -webkit-obrder-radius: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.tip:hover:after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+  border-style: solid;
+  border-width: 5px;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: 1em;
 }
