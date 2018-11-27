@@ -96,3 +96,71 @@ button {
   top: -5px;
   left: 1em;
 }
+
+/* accordion */
+.a-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.a-container input[type=radio] {
+  display: none;
+}
+
+.a-container label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #aaaaaa;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #dddddd;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+/* arrow */
+.a-container label:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 8px solid #aaaaaa;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 6px solid transparent;
+  positioN: absolute;
+  right: 10px;
+  top: 16px;
+}
+
+.a-container input:checked + label,
+.a-container label:hover {
+  background-color: #dddddd;
+  color: #222222;
+}
+
+/* up arrow */
+.a-container input:checked + label:after {
+  border-top: 8px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #222;
+  border-left: 6px solid transparent;
+  top: 6px;
+}
+
+.a-content {
+  padding: 0 20px 20px;
+  display: none;
+}
+
+.a-container input:checked ~ .a-content {
+  display: block;
+}
