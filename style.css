@@ -164,3 +164,18 @@ button {
 .a-container input:checked ~ .a-content {
   display: block;
 }
+
+/* calculator */
+.calculator-body {
+  border: solid 1px black;
+  width: 300px;
+}
+
+.calculator-body ul {
+  margin: 0;
+  padding: 0;
+}
+
+.calculator-body li {
+  list-style: none;
+}
